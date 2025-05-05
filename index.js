@@ -1,6 +1,11 @@
 import { MnistData } from './data.js';
 import { MNISTModel } from './model.js';
 
+// const gl = document.createElement('canvas').getContext('webgl2');
+// if (gl) {
+//   console.log('WebGL 2 max texture size:', gl.getParameter(gl.MAX_TEXTURE_SIZE));
+// }
+
 let model;
 let isDrawing = false;
 let chart = null;
@@ -132,7 +137,7 @@ async function init() {
     console.log("training model...");
     const [xTrain, yTrain] = data.getTrainData();
     
-    await model.train(xTrain, yTrain, 25, 2048);
+    await model.train(xTrain, yTrain, 10, 1024);
     console.log('Training complete! You can now draw digits and make predictions.');
 }
 
