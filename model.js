@@ -58,7 +58,7 @@ export class MNISTModel {
             console.log(this.model.summary());
         } catch (error) {
             console.error('Error creating model:', error);
-            this.updateStatus('Error creating model. Check console for details.');
+            this.updateStatus('Error creating model : ', error);
             throw error;
         }
     }
@@ -106,7 +106,7 @@ export class MNISTModel {
             return history;
         } catch (error) {
             console.error('Error during training:', error);
-            this.updateStatus('Error during training. Check console for details.');
+            this.updateStatus('Error during training : ', error);
             throw error;
         }
     }
@@ -132,7 +132,7 @@ export class MNISTModel {
             return prediction;
         } catch (error) {
             console.error('Error during prediction:', error);
-            this.updateStatus('Error making prediction. Check console for details.');
+            this.updateStatus('Error making prediction : ', error);
             throw error;
         }
     }
