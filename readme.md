@@ -1,0 +1,1 @@
+mnist live demo using tensorflowjs and chartjs for tezos jh pathfinder event
